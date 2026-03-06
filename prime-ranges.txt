@@ -1,0 +1,46 @@
+Define psi(p) = maximum number of consecutive integers none of which are relatively prime to every prime q less than p.
+Define rho(p) = maximum number of consecutive integers at most one of which is relatively prime to every prime q less than p.
+Define lambda(p) = maximum number of consecutive integers at most two of which are relatively prime to every prime q less than p.
+
+There are some relationships between psi < row < lambda.
+
+psi(13) = 21 starting from 9440
+psi(17) = 25 starting from 217128
+psi(19) = 33 starting from 60044
+psi(23) = 29 starting from 20332472
+psi(29) = 45 starting from 417086648
+psi(31) = 57 starting from 74959204292
+
+
+
+
+FACT:
+If c divides a, then c in Q([a, b)) iff c does not divide b-a.
+
+If c divides b, then c in Q((a, b]) iff c does not divide b-a.
+
+If c divides a or b, then c in Q([a, b]) iff c does not divide 1+b-a.  Apply previous to (a-1, b] or [a, b+1)
+
+
+Let L = {kN}, R = {(k+1)N}, M = (kN, (k+1)N) and W = [kN, (k+1)N]
+
+
+
+Claim: 
+S in Q(M)\Q(W) => piS|(N+1).
+
+Suppose S in Q(M)\Q(W). 
+
+Then it must be that floor((N+1)/piS) != floor((N-1)/piS) 
+because W contains exactly floor((N+1)/piS) many multiples of piS and the subset M already contains more than floor((N-1)/piS) many.
+
+It follows that piS|N or piS|(N+1). 
+
+It can't be that piS|N because of the third fact above.
+
+
+FACT:
+If N+1 is prime, then Q(M)\Q(W) is empty
+
+
+

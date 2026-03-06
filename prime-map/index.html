@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Prime Map</title>
+    <link href="./prime-map.css" rel="stylesheet" type="text/css">
+    <script src="./jquery-3.6.0-min.js" type="text/javascript"></script>
+    <script src="./prime-map.js" type="text/javascript"></script>
+  </head>
+  <body onload="updateDisplay()">
+    <div id="mainDiv">
+      <div>
+        <div class="holder">
+          <label for="base">Base Value:</label>
+          <input type="number" id="base" min="1" max="250" value="25" onchange="updateDisplay()"/>
+        </div>
+        <div class="holder">
+          <label for="multiplier">Multiplier:</label>
+          <input type="number" id="multiplier" min = "1" max="250" value="3" onchange="updateDisplay()"/>
+        </div>
+        <div class="holder">
+          <label for="all">all</label>
+          <input type="radio" id="all" name="filter" checked/>
+          <label for="top">top</label>
+          <input type="radio" id="top" name="filter"/>
+          <label for="bottom">bottom</label>
+          <input type="radio" id="bottom" name="filter"/>
+        </div>
+      </div>
+      <div id="primeSelectors" class="holder">
+      </div>
+      <div id="qualifierDiv">
+        <span>Qualifer: </span><span id="qualifer"></span>
+      </div>
+      <div id="qualCount">
+        <span>Actual: </span><span id="actual"></span>
+        <span>Expected: </span><span id="expected"></span>
+      </div>
+      <div id="mapContainer" class="holder">
+      </div>
+    </div>
+  </body>
+</html>
